@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RunRight App Design — Nathan Bartolo</title>
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/images/logo(dark blue).png" alt="Logo">
+    </a>
+  </nav>
+
+  <section class="detail-header">
+    <div class="detail-header-left">
+      <h1>RunRight App Design</h1>
+      <div class="detail-meta">
+        <span class="detail-meta-label">Project Type</span>
+        <span class="detail-meta-value">App / UX Design</span>
+      </div>
+      <div class="detail-tags">
+        <span class="detail-tag">Figma</span>
+        <span class="detail-tag">UX Design</span>
+        <span class="detail-tag">UI Design</span>
+        <span class="detail-tag">Mobile</span>
+      </div>
+    </div>
+    <div class="detail-header-right">
+      <p>RunRight is a mobile fitness app designed with a strong focus on intuitive UX and clean, modern visuals. The project covers the full design process from user research and wireframing to high-fidelity prototyping in Figma, creating a seamless and user-centered experience.</p>
+      <p>The app is designed to motivate runners to stay active by allowing them to track runs, monitor progress, and view performance insights through a clear and engaging interface. Smooth interactions, thoughtful layout decisions, and visually appealing components work together to create an experience that is both functional and motivating.</p>
+      <div class="detail-cta"><a href="https://www.figma.com/proto/pHqSAl9MaSk5i89OBV15E0/RunRight?node-id=92-459&starting-point-node-id=1%3A5&t=6cNG6hCfQNcYQZF0-1" target="_blank" rel="noopener noreferrer">View Figma Prototype</a></div>
+    </div>
+  </section>
+
+  <div class="detail-hero reveal">
+    <img src="../assets/images/Runright%20App%20Design%20Ux/RunRight%20Logo.png" alt="RunRight App" class="detail-hero-img">
+  </div>
+
+  <section class="detail-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Runright%20App%20Design%20Ux/runright%201.png" alt="RunRight 1">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Runright%20App%20Design%20Ux/Activity.png" alt="RunRight Activity">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Runright%20App%20Design%20Ux/Splash%20Screen%201.png" alt="RunRight Splash Screen">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Runright%20App%20Design%20Ux/Frame%201.png" alt="RunRight Frame">
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-video">
+    <span class="detail-video-label">Walkthrough</span>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/kqJxkMVhu1g" title="RunRight App Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <div class="detail-back">
+    <a href="../index.html">← Back to all projects</a>
+  </div>
+
+  <footer class="detail-footer">
+    <p>Nathan Bartolo — 2025</p>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

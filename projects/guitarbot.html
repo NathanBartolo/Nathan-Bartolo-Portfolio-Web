@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guitarbot Chatbot — Nathan Bartolo</title>
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/images/logo(dark blue).png" alt="Logo">
+    </a>
+  </nav>
+
+  <section class="detail-header">
+    <div class="detail-header-left">
+      <h1>Guitarbot Chatbot</h1>
+      <div class="detail-meta">
+        <span class="detail-meta-label">Project Type</span>
+        <span class="detail-meta-value">Chatbot / Interactive</span>
+      </div>
+      <div class="detail-tags">
+        <span class="detail-tag">JavaScript</span>
+        <span class="detail-tag">AI</span>
+        <span class="detail-tag">Chatbot</span>
+        <span class="detail-tag">Music</span>
+      </div>
+    </div>
+    <div class="detail-header-right">
+      <p>Guitarbot is an interactive chatbot designed to help users explore the world of guitars. From recommending instruments to answering questions about chords and techniques, it delivers a conversational experience rooted in music knowledge.</p>
+      <div class="detail-cta"><a href="https://nathanbartolo.github.io/GuitarHub/" target="_blank" rel="noopener noreferrer">View Live Project</a></div>
+    </div>
+  </section>
+
+  <div class="detail-hero reveal">
+    <img src="../assets/images/Guitarbot%20Chatbot/guitarbot%201.png" alt="Guitarbot Chatbot" class="detail-hero-img">
+  </div>
+
+  <section class="detail-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Guitarbot%20Chatbot/guitarbot%202.png" alt="Guitarbot 2">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Guitarbot%20Chatbot/guitarbot%203.png" alt="Guitarbot 3">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Guitarbot%20Chatbot/guitarbot%204.png" alt="Guitarbot 4">
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-video">
+    <span class="detail-video-label">Walkthrough</span>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/9HkRMY475ao" title="GuitarBot Chatbot Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <div class="detail-back">
+    <a href="../index.html">← Back to all projects</a>
+  </div>
+
+  <footer class="detail-footer">
+    <p>Nathan Bartolo — 2025</p>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rhythymize Website — Nathan Bartolo</title>
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/images/logo(dark blue).png" alt="Logo">
+    </a>
+  </nav>
+
+  <section class="detail-header">
+    <div class="detail-header-left">
+      <h1>Rhythymize Website</h1>
+      <div class="detail-meta">
+        <span class="detail-meta-label">Project Type</span>
+        <span class="detail-meta-value">E-Commerce Website</span>
+      </div>
+      <div class="detail-tags">
+        <span class="detail-tag">HTML</span>
+        <span class="detail-tag">CSS</span>
+        <span class="detail-tag">JavaScript</span>
+        <span class="detail-tag">E-Commerce</span>
+      </div>
+    </div>
+    <div class="detail-header-right">
+      <p>Rhythymize is a guitar e-commerce website designed to deliver a premium shopping experience. It features brand-specific pages for Fender, Gibson, PRS, and Ibanez, with dynamic product displays and a visually striking dark-themed aesthetic. This website was also selected as one of the top websites in our school assessment for that semester, highlighting its standout design and functionality.</p>
+      <div class="detail-cta"><a href="https://nathanbartolo.github.io/Rythimize.github.io/" target="_blank" rel="noopener noreferrer">View Live Project</a></div>
+    </div>
+  </section>
+
+  <div class="detail-hero reveal">
+    <img src="../assets/images/Rhythymize%20Website/Rhytymize%201.png" alt="Rhythymize Website" class="detail-hero-img">
+  </div>
+
+  <section class="detail-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Rhythymize%20Website/Rhytymize%202.png" alt="Rhythymize 2">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Rhythymize%20Website/Rhytymize%203.png" alt="Rhythymize 3">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Rhythymize%20Website/Rhytymize%204.png" alt="Rhythymize 4">
+      </div>
+    </div>
+  </section>
+
+  <div class="detail-back">
+    <a href="../index.html">← Back to all projects</a>
+  </div>
+
+  <footer class="detail-footer">
+    <p>Nathan Bartolo — 2025</p>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

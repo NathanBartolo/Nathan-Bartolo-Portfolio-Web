@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost In Translation — Nathan Bartolo</title>
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/images/logo(dark blue).png" alt="Logo">
+    </a>
+  </nav>
+
+  <section class="detail-header">
+    <div class="detail-header-left">
+      <h1>Lost In Translation</h1>
+      <div class="detail-meta">
+        <span class="detail-meta-label">Project Type</span>
+        <span class="detail-meta-value">Interactive / Game</span>
+      </div>
+      <div class="detail-tags">
+        <span class="detail-tag">Bitsy</span>
+        <span class="detail-tag">Game Design</span>
+        <span class="detail-tag">Narrative</span>
+        <span class="detail-tag">Pixel Art</span>
+      </div>
+    </div>
+    <div class="detail-header-right">
+      <p>An explorative narrative game built with Bitsy that takes players on a journey through language, culture, and miscommunication. A pixel-art experience that tells a personal story through interactive environments and dialogue.</p>
+    </div>
+  </section>
+
+  <div class="detail-hero reveal">
+    <img src="../assets/images/Lost%20In%20Translation/bitsy%201.png" alt="Lost In Translation" class="detail-hero-img">
+  </div>
+
+  <section class="detail-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Lost%20In%20Translation/bitsy%202.png" alt="Lost In Translation 2">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Lost%20In%20Translation/bitsy%203.png" alt="Lost In Translation 3">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Lost%20In%20Translation/bitsy%204.png" alt="Lost In Translation 4">
+      </div>
+    </div>
+  </section>
+
+  <div class="detail-back">
+    <a href="../index.html">← Back to all projects</a>
+  </div>
+
+  <footer class="detail-footer">
+    <p>Nathan Bartolo — 2025</p>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pied Piper Of Hamelin — Nathan Bartolo</title>
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/images/logo(dark blue).png" alt="Logo">
+    </a>
+  </nav>
+
+  <section class="detail-header">
+    <div class="detail-header-left">
+      <h1>Pied Piper Of Hamelin</h1>
+      <div class="detail-meta">
+        <span class="detail-meta-label">Project Type</span>
+        <span class="detail-meta-value">Twine Game</span>
+      </div>
+      <div class="detail-tags">
+        <span class="detail-tag">Twine</span>
+        <span class="detail-tag">Interactive Fiction</span>
+        <span class="detail-tag">Storytelling</span>
+        <span class="detail-tag">Game Design</span>
+      </div>
+    </div>
+    <div class="detail-header-right">
+      <p>A reimagining of the classic Pied Piper tale as an interactive Twine game. Players navigate branching storylines, making choices that shape the narrative outcome — blending folklore with modern interactive storytelling techniques.</p>
+      <div class="detail-cta"><a href="https://tunenchi.itch.io/pied-piper-of-hamelin" target="_blank" rel="noopener noreferrer">Play on Itch.io</a></div>
+    </div>
+  </section>
+
+  <div class="detail-hero reveal">
+    <img src="../assets/images/Pied%20Piper%20Of%20Hamelin%20Twine%20Game/hamelin%201.png" alt="Pied Piper Of Hamelin" class="detail-hero-img">
+  </div>
+
+  <section class="detail-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Pied%20Piper%20Of%20Hamelin%20Twine%20Game/hamelin%202.png" alt="Pied Piper 2">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Pied%20Piper%20Of%20Hamelin%20Twine%20Game/hamelin%203.png" alt="Pied Piper 3">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Pied%20Piper%20Of%20Hamelin%20Twine%20Game/hamelin%204.png" alt="Pied Piper 4">
+      </div>
+    </div>
+  </section>
+
+  <div class="detail-back">
+    <a href="../index.html">← Back to all projects</a>
+  </div>
+
+  <footer class="detail-footer">
+    <p>Nathan Bartolo — 2025</p>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

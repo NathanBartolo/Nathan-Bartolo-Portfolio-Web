@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beatles Discography Website — Nathan Bartolo</title>
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/images/logo(dark blue).png" alt="Logo">
+    </a>
+  </nav>
+
+  <section class="detail-header">
+    <div class="detail-header-left">
+      <h1>Beatles Discography Website</h1>
+      <div class="detail-meta">
+        <span class="detail-meta-label">Project Type</span>
+        <span class="detail-meta-value">Website</span>
+      </div>
+      <div class="detail-tags">
+        <span class="detail-tag">HTML</span>
+        <span class="detail-tag">CSS</span>
+        <span class="detail-tag">Web Design</span>
+        <span class="detail-tag">Music</span>
+      </div>
+    </div>
+    <div class="detail-header-right">
+      <p>A comprehensive web experience celebrating the legendary discography of The Beatles. This fully single-page website is built using Node.js, HTML, and Sass, and is designed to showcase the band’s musical journey through a discography-focused, highly interactive experience.</p>
+      <p>The site features album covers, release dates, and detailed track listings presented through a clean, immersive design that pays homage to the timeless artistry of the Fab Four. It emphasizes interactivity through dynamic visuals, smooth transitions, engaging animations, and integrated sound elements—allowing users not just to browse, but to experience the evolution of Beatles music in a more engaging and memorable way.</p>
+      <div class="detail-cta"><a href="https://beatles-discography.onrender.com/" target="_blank" rel="noopener noreferrer">View Live Project</a></div>
+    </div>
+  </section>
+
+  <div class="detail-hero reveal">
+    <img src="../assets/images/Beatles%20Discography%20Website/2.png" alt="Beatles Discography Website" class="detail-hero-img">
+  </div>
+
+  <section class="detail-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Beatles%20Discography%20Website/beatles%201.png" alt="Beatles Discography 1">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Beatles%20Discography%20Website/beatles%202.png" alt="Beatles Discography 2">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Beatles%20Discography%20Website/beatles%203.png" alt="Beatles Discography 3">
+      </div>
+      <div class="gallery-item reveal">
+        <img src="../assets/images/Beatles%20Discography%20Website/beatles%204.png" alt="Beatles Discography 4">
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-video">
+    <span class="detail-video-label">Walkthrough</span>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/g9OsK1otTLY" title="Beatles Discography Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <div class="detail-back">
+    <a href="../index.html">← Back to all projects</a>
+  </div>
+
+  <footer class="detail-footer">
+    <p>Nathan Bartolo — 2025</p>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
