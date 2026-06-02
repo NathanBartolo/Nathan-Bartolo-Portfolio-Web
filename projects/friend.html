@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Friend — 5ense Studios</title>
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-logo">
+      <img src="../assets/images/logo(dark blue).png" alt="Logo">
+    </a>
+  </nav>
+
+  <section class="detail-header">
+    <div class="detail-header-left">
+      <h1>The Friend</h1>
+      <div class="detail-meta">
+        <span class="detail-meta-label">Project Type</span>
+        <span class="detail-meta-value">Game</span>
+      </div>
+      <div class="detail-tags">
+        <span class="detail-tag">React Js</span>
+        <span class="detail-tag">CSS</span>
+        <span class="detail-tag">Web Design</span>
+        <span class="detail-tag">Music</span>
+        <span class="detail-tag">Game Development</span>
+        <span class="detail-tag">Interactive Narrative</span>
+        <span class="detail-tag">Firebase</span>
+      </div>
+    </div>
+    <div class="detail-header-right">
+      <p>The Friend is a Full Motion Video (FMV) narrative game created by 5ENSE Studios. Formed by a group of five aspiring students, the project was designed to showcase our individual skills and creative strengths. Over the past three months, we developed an interactive FMV experience where players investigate a 2016 cold case through recovered interrogation footage, navigating the conflicting stories of four friends.</p>
+      <p>Before the project came to life, there was the team behind it—5ENSE Studios, a collective of unique individuals united by the goal of utilising our creative talents across film, music, technology, and design to reinvent how people navigate digital experiences.</p>
+      <p>I served as the Lead Developer and Sound Designer for the project. My responsibilities included supervising the game’s coding and backend development, leading technical implementation, and composing and producing the original score and soundtrack that shaped the game’s atmosphere and emotional experience.</p>
+      <div class="detail-cta"><a href="https://thefriend.vercel.app/" target="_blank" rel="noopener noreferrer">View Live Project</a></div>
+      <div class="detail-cta"><a href="https://sensestudios.vercel.app/" target="_blank" rel="noopener noreferrer">View Business Website</a></div>
+    </div>
+  </section>
+
+  <div class="detail-hero reveal">
+    <img src="../assets/images/The Friend/1.png" alt="The Friend" class="detail-hero-img">
+  </div>
+
+  <section class="detail-gallery">
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="../assets/images/The Friend/2.png" alt="The Friend 1">
+      </div>
+  </section>
+
+  <section class="detail-video">
+    <span class="detail-video-label">Walkthrough</span>
+    <div class="video-wrap">
+      <iframe src="https://youtu.be/KQtxPm8cwH8" title="The Friend Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://youtu.be/9DoTJ3gFTcw" title="The Friend Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://youtu.be/77tvCBLHses" title="The Friend Project Description" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <div class="detail-back">
+    <a href="../index.html">← Back to all projects</a>
+  </div>
+
+  <footer class="detail-footer">
+    <p>Nathan Bartolo — 2025</p>
+  </footer>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
